@@ -5,8 +5,8 @@ const createUserTable = async () => {
     CREATE EXTENSION IF NOT EXISTS pgcrypto;
     CREATE TABLE IF NOT EXISTS users (
       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-      username VARCHAR(100) NOT NULL,
-      email VARCHAR(300) NOT NULL,
+      username VARCHAR(100) NOT NULL UNIQUE,
+      email VARCHAR(300) NOT NULL UNIQUE,
       password TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT NOW(),
       update_at TIMESTAMP DEFAULT NOW()

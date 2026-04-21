@@ -1,32 +1,11 @@
 import {
-  createUserService,
   deleteUserService,
   getAllUsersService,
   getUserByIdService,
   updateUserService,
-} from "../models/userModel.js";
+} from "../model/userModel.js";
 import bcrypt from "bcrypt";
-
-const handleResponse = (res, status, message, data = null) => {
-  res.status(status).json({
-    status,
-    message,
-    data,
-  });
-};
-
-export const createUser = async (req, res, next) => {
-  const { username, email, password } = req.body;
-  try {
-    const saltRounds = 10;
-    const hashedPassword = await bcrypt.hash(password, saltRounds);
-
-    const newUser = await createUserService(username, email, hashedPassword);
-    handleResponse(res, 201, "User created successfully", newUser);
-  } catch (err) {
-    next(err);
-  }
-};
+import handleResponse from "../routes/handleResponse.js";
 
 export const getAllUsers = async (req, res, next) => {
   try {
