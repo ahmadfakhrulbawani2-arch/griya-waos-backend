@@ -16,3 +16,11 @@
 **DELETE** `/books/:id`: Delete a book <br />
 
 Data: [Books Database](./src/data/mockBooks.json)<br />
+
+## Papers Table (papers)
+
+**GET** `/papers`: Get all papers (can use page=&limit= params) <br />
+**GET** `/papers/:id`: Get paper by id <br />
+**POST** `/papers`: Create paper <br />
+**PUT** `/papers/:id`: Update paper <br />
+**DELETE** `/papers/:id`: delete paper <br />
