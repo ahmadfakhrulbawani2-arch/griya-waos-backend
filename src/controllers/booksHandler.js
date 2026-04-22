@@ -18,6 +18,12 @@ export const getAllBooks = async (req, res, next) => {
       booksMetadataController(),
     ]);
 
+    const totalPage = Math.ceil(total / limitReq);
+    if (pageReq > totalPage && totalPage !== 0) {
+      handleResponse(res, 404, "Accessing out of range page");
+      return;
+    }
+
     handleResponse(res, 200, "Books fetched successfully", books, {
       total_data: total,
       total_page: Math.ceil(total / limitReq),
