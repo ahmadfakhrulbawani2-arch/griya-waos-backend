@@ -7,6 +7,7 @@ import userRoutes from "./routes/userRoutes.js";
 import loginRegisterRoutes from "./routes/loginRegisterRoutes.js";
 import errorHandling from "./middlewares/errorHandler.js";
 import createUserTable from "./data/createUserTable.js";
+import createBooksTable from "./data/createBooksTable.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -23,6 +24,7 @@ app.use(errorHandling);
 
 // creating table
 createUserTable();
+createBooksTable();
 
 // Testing POSTGRES
 app.get("/", async (req, res) => {
