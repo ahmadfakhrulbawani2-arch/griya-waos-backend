@@ -6,9 +6,11 @@ import pool from "./configs/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import loginRegisterRoutes from "./routes/loginRegisterRoutes.js";
 import booksRoutes from "./routes/booksRoutes.js";
+import papersRoutes from "./routes/papersRoutes.js";
 import errorHandling from "./middlewares/errorHandler.js";
 import createUserTable from "./data/createUserTable.js";
 import createBooksTable from "./data/createBooksTable.js";
+import createPapersTable from "./data/createPapersTable.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -21,12 +23,14 @@ app.use(cors());
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", loginRegisterRoutes);
 app.use("/api/v1", booksRoutes);
+app.use("/api/v1", papersRoutes);
 // err handling middleware
 app.use(errorHandling);
 
 // creating table
 createUserTable();
 createBooksTable();
+createPapersTable();
 
 // Testing POSTGRES
 app.get("/", async (req, res) => {

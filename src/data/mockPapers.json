@@ -1,0 +1,241 @@
+[
+  {
+    "doi": "10.1000/abc001",
+    "title": "Deep Learning for Beginners",
+    "author": "Alice Johnson",
+    "publisher": "AI Journal",
+    "year": 2023,
+    "abstract": "Introduction to deep learning concepts.",
+    "citation": "Johnson (2023)",
+    "first_label": "ai",
+    "second_label": "machine-learning",
+    "pages": 12,
+    "pdf_url": "https://example.com/p1.pdf",
+    "image_url": "https://example.com/p1.jpg"
+  },
+
+  {
+    "doi": null,
+    "title": "Graph Neural Networks Survey",
+    "author": "Bob Smith",
+    "publisher": "Neural Computing",
+    "year": 2022,
+    "abstract": "",
+    "citation": "Smith (2022)",
+    "first_label": "ai",
+    "second_label": "graphs",
+    "pages": 25,
+    "pdf_url": "https://example.com/p2.pdf",
+    "image_url": ""
+  },
+
+  {
+    "doi": "10.1000/abc003",
+    "title": "Quantum Computing Basics",
+    "author": "Charlie Lee",
+    "publisher": "Physics Today",
+    "year": 2021,
+    "abstract": "Basic quantum computing principles.",
+    "citation": "Lee (2021)",
+    "first_label": "physics",
+    "second_label": "quantum",
+    "pages": 30,
+    "pdf_url": "https://example.com/p3.pdf",
+    "image_url": "https://example.com/p3.jpg"
+  },
+
+  {
+    "doi": "",
+    "title": "Natural Language Processing Overview",
+    "author": "Diana Rose",
+    "publisher": "Computational Linguistics",
+    "year": 2020,
+    "abstract": null,
+    "citation": "Rose (2020)",
+    "first_label": "nlp",
+    "second_label": "ai",
+    "pages": 18,
+    "pdf_url": "https://example.com/p4.pdf",
+    "image_url": null
+  },
+
+  {
+    "doi": "10.1000/abc005",
+    "title": "Reinforcement Learning in Robotics",
+    "author": "Evan Carter",
+    "publisher": "Robotics Journal",
+    "year": 2024,
+    "abstract": "RL applications in robotics systems.",
+    "citation": "Carter (2024)",
+    "first_label": "robotics",
+    "second_label": "ai",
+    "pages": 40,
+    "pdf_url": "https://example.com/p5.pdf",
+    "image_url": "https://example.com/p5.jpg"
+  },
+
+  {
+    "doi": null,
+    "title": "Computer Vision Techniques",
+    "author": "Fiona Green",
+    "publisher": "Vision Press",
+    "year": 2023,
+    "abstract": "Survey of modern CV methods.",
+    "citation": "Green (2023)",
+    "first_label": "vision",
+    "second_label": "ai",
+    "pages": 22,
+    "pdf_url": "https://example.com/p6.pdf",
+    "image_url": "https://example.com/p6.jpg"
+  },
+
+  {
+    "doi": "10.1000/abc007",
+    "title": "Data Structures and Algorithms",
+    "author": "George White",
+    "publisher": "CS Books",
+    "year": 2019,
+    "abstract": "",
+    "citation": "White (2019)",
+    "first_label": "cs",
+    "second_label": "algorithms",
+    "pages": 55,
+    "pdf_url": "https://example.com/p7.pdf",
+    "image_url": ""
+  },
+
+  {
+    "doi": "10.1000/abc008",
+    "title": "Blockchain Fundamentals",
+    "author": "Hannah Brown",
+    "publisher": "Crypto Journal",
+    "year": 2022,
+    "abstract": "Introduction to blockchain systems.",
+    "citation": "Brown (2022)",
+    "first_label": "blockchain",
+    "second_label": "crypto",
+    "pages": 28,
+    "pdf_url": "https://example.com/p8.pdf",
+    "image_url": "https://example.com/p8.jpg"
+  },
+
+  {
+    "doi": null,
+    "title": "Cybersecurity Threat Analysis",
+    "author": "Ian Miller",
+    "publisher": "Security Review",
+    "year": 2021,
+    "abstract": "Analysis of modern cyber threats.",
+    "citation": "Miller (2021)",
+    "first_label": "security",
+    "second_label": "cyber",
+    "pages": 33,
+    "pdf_url": "https://example.com/p9.pdf",
+    "image_url": "https://example.com/p9.jpg"
+  },
+
+  {
+    "doi": "10.1000/abc010",
+    "title": "Big Data Analytics",
+    "author": "Julia Adams",
+    "publisher": "Data Science Journal",
+    "year": 2020,
+    "abstract": "Techniques for analyzing big data.",
+    "citation": "Adams (2020)",
+    "first_label": "data",
+    "second_label": "analytics",
+    "pages": 45,
+    "pdf_url": "https://example.com/p10.pdf",
+    "image_url": "https://example.com/p10.jpg"
+  },
+
+  {
+    "doi": "",
+    "title": "Edge Computing Systems",
+    "author": "Kevin Stone",
+    "publisher": "Cloud Tech",
+    "year": 2024,
+    "abstract": "Computing at the edge of networks.",
+    "citation": "Stone (2024)",
+    "first_label": "cloud",
+    "second_label": "edge",
+    "pages": 20,
+    "pdf_url": "https://example.com/p11.pdf",
+    "image_url": null
+  },
+
+  {
+    "doi": "10.1000/abc012",
+    "title": "Machine Learning Pipelines",
+    "author": "Laura King",
+    "publisher": "ML Journal",
+    "year": 2023,
+    "abstract": "End-to-end ML pipeline design.",
+    "citation": "King (2023)",
+    "first_label": "ml",
+    "second_label": "engineering",
+    "pages": 38,
+    "pdf_url": "https://example.com/p12.pdf",
+    "image_url": "https://example.com/p12.jpg"
+  },
+
+  {
+    "doi": null,
+    "title": "Autonomous Vehicles Systems",
+    "author": "Michael Scott",
+    "publisher": "Transport AI",
+    "year": 2022,
+    "abstract": "",
+    "citation": "Scott (2022)",
+    "first_label": "ai",
+    "second_label": "transport",
+    "pages": 50,
+    "pdf_url": "https://example.com/p13.pdf",
+    "image_url": ""
+  },
+
+  {
+    "doi": null,
+    "title": "Autonomous Vehicles Systems",
+    "author": "Michael Scott",
+    "publisher": "Transport AI",
+    "year": 2022,
+    "abstract": "",
+    "citation": "Scott (2022)",
+    "first_label": "ai",
+    "second_label": "transport",
+    "pages": 50,
+    "pdf_url": "https://example.com/p13.pdf",
+    "image_url": ""
+  },
+
+  {
+    "doi": "10.1000/abc014",
+    "title": "Human-Computer Interaction",
+    "author": "Nancy Drew",
+    "publisher": "HCI Journal",
+    "year": 2021,
+    "abstract": "Study of user interaction systems.",
+    "citation": "Drew (2021)",
+    "first_label": "hci",
+    "second_label": "ux",
+    "pages": 27,
+    "pdf_url": "https://example.com/p14.pdf",
+    "image_url": "https://example.com/p14.jpg"
+  },
+
+  {
+    "doi": "",
+    "title": "Distributed Systems Concepts",
+    "author": "Oscar Wilde",
+    "publisher": "Systems Review",
+    "year": 2019,
+    "abstract": "Core concepts of distributed computing.",
+    "citation": "Wilde (2019)",
+    "first_label": "systems",
+    "second_label": "distributed",
+    "pages": 60,
+    "pdf_url": "https://example.com/p15.pdf",
+    "image_url": null
+  }
+]
