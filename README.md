@@ -82,7 +82,7 @@ Data: [Books Database](./src/test/mockBooks.json)<br />
 
 ## ⚙️ Running instructions
 
-0. Uncomment part of this [index.js](./src/index.js):
+0. Uncomment part of this [index.js](./src/index.js) (if I comment it):
 
 ```js
 app.listen(port, () => {
