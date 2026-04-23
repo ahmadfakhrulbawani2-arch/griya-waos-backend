@@ -38,7 +38,7 @@ export const updateUser = async (req, res, next) => {
       req.user.id,
       username,
       email,
-      password,
+      hashedPassword,
     );
     if (!user) {
       return handleResponse(res, 404, "User not found");

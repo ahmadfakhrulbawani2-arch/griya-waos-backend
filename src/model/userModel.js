@@ -32,7 +32,7 @@ export const createUserService = async (username, email, password) => {
   const result = await pool.query(
     `
     INSERT INTO users (username, email, password) VALUES ($1, $2, $3)
-    RETURNING *
+    RETURNING username, email
     `,
     [username, email, password],
   );
@@ -43,7 +43,7 @@ export const updateUserService = async (id, username, email, password) => {
     `
     UPDATE users SET username = $1, email = $2, updated_at = $4, password = $5  
     WHERE id=$3
-    RETURNING *
+    RETURNING id, username, email
   `,
     [username, email, id, new Date(), password],
   );
@@ -54,7 +54,7 @@ export const deleteUserService = async (id) => {
     `
     DELETE FROM users
     WHERE id = $1
-    RETURNING *
+    RETURNING id, username, email
   `,
     [id],
   );

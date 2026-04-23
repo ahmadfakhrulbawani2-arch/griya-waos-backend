@@ -62,11 +62,10 @@ export const createBlog = async (req, res, next) => {
 export const updateBlog = async (req, res, next) => {
   const payload = normalizeJson(req.body);
   const userId = req.user.id;
-  payload.user_id = userId;
 
   const id = req.params.id;
   try {
-    const blog = await updateBlogController(id, payload);
+    const blog = await updateBlogController(id, payload, userId);
     handleResponse(res, 200, "Blog updated successfully", blog);
   } catch (err) {
     next(err);
@@ -75,8 +74,9 @@ export const updateBlog = async (req, res, next) => {
 
 export const deleteBlog = async (req, res, next) => {
   const id = req.params.id;
+  const userId = req.user.id;
   try {
-    const blog = await deleteBlogController(id);
+    const blog = await deleteBlogController(id, userId);
     handleResponse(res, 200, "Blog deleted successfully", blog);
   } catch (err) {
     next(err);

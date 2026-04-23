@@ -44,46 +44,55 @@ export const createBookController = async (payload) => {
   return result.rows[0];
 };
 
-export const updateBookController = async (id, payload) => {
-  // const keys = [];
+export const updateBookController = async (id, payload, userId) => {
   const values = [];
-  // const placeholders = [];
   const fields = [];
 
   let idx = 1;
 
   for (const key in payload) {
     fields.push(`${key} = $${idx}`);
-    // keys.push(key);
     values.push(payload[key]);
-    // placeholders.push(`$${idx}`);
     idx++;
   }
 
-  // always update timestamp
   fields.push(`updated_at = $${idx}`);
   values.push(new Date());
   idx++;
 
   values.push(id);
+  idx++;
+  values.push(userId);
 
   const result = await pool.query(
     `
     UPDATE books SET ${fields.join(", ")}
-    WHERE id = $${idx}
+    WHERE id = $${idx - 1} AND user_id = $${idx}
     RETURNING *
     `,
     values,
   );
 
+  if (result.rows.length === 0) {
+    const error = new Error("Data not found or unauthorized");
+    error.statusCode = 404;
+    throw error;
+  }
+
   return result.rows[0];
 };
 
-export const deleteBookController = async (id) => {
+export const deleteBookController = async (id, userId) => {
   const result = await pool.query(
-    `DELETE FROM books WHERE id = $1 RETURNING *`,
-    [id],
+    `DELETE FROM books WHERE id = $1 AND user_id = $2 RETURNING *`,
+    [id, userId],
   );
+
+  if (result.rows.length === 0) {
+    const error = new Error("Data not found or unauthorized");
+    error.statusCode = 404;
+    throw error;
+  }
 
   return result.rows[0];
 };

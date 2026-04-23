@@ -62,11 +62,10 @@ export const createPaper = async (req, res, next) => {
 export const updatePaper = async (req, res, next) => {
   const payload = normalizeJson(req.body);
   const userId = req.user.id;
-  payload.user_id = userId;
 
   const id = req.params.id;
   try {
-    const paper = await updatePaperController(id, payload);
+    const paper = await updatePaperController(id, payload, userId);
     handleResponse(res, 200, "Paper updated successfully", paper);
   } catch (err) {
     next(err);
@@ -75,8 +74,9 @@ export const updatePaper = async (req, res, next) => {
 
 export const deletePaper = async (req, res, next) => {
   const id = req.params.id;
+  const userId = req.user.id;
   try {
-    const paper = await deletePaperController(id);
+    const paper = await deletePaperController(id, userId);
     handleResponse(res, 200, "Paper deleted successfully", paper);
   } catch (err) {
     next(err);
