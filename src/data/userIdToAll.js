@@ -3,8 +3,9 @@ import pool from "../configs/db.js";
 export const userIdinBooks = async () => {
   const query = `
     ALTER TABLE books
-    ADD COLUMN user_id UUID;
+    ADD COLUMN IF NOT EXISTS user_id UUID;
   `;
+
   const query2 = `
     ALTER TABLE books
     ADD CONSTRAINT fk_books_user
@@ -15,17 +16,27 @@ export const userIdinBooks = async () => {
 
   try {
     await pool.query(query);
-    await pool.query(query2);
-    console.log("Add user_id constraint in books");
+    console.log("Column user_id ensured");
   } catch (err) {
-    console.log("Error adding user_id constraint in books", err);
+    console.log("Error adding column:", err.message);
+  }
+
+  try {
+    await pool.query(query2);
+    console.log("Constraint ensured");
+  } catch (err) {
+    if (err.code === "42710") {
+      console.log("Constraint already exists, skip");
+    } else {
+      console.log("Error adding constraint:", err.message);
+    }
   }
 };
 
 export const userIdinPapers = async () => {
   const query = `
     ALTER TABLE papers
-    ADD COLUMN user_id UUID;
+    ADD COLUMN IF NOT EXISTS user_id UUID;
   `;
 
   const query2 = `
@@ -38,17 +49,27 @@ export const userIdinPapers = async () => {
 
   try {
     await pool.query(query);
-    await pool.query(query2);
-    console.log("Add user_id constraint in papers");
+    console.log("Column user_id ensured");
   } catch (err) {
-    console.log("Error adding user_id constraint in papers", err);
+    console.log("Error adding column:", err.message);
+  }
+
+  try {
+    await pool.query(query2);
+    console.log("Constraint ensured");
+  } catch (err) {
+    if (err.code === "42710") {
+      console.log("Constraint already exists, skip");
+    } else {
+      console.log("Error adding constraint:", err.message);
+    }
   }
 };
 
 export const userIdinBlogs = async () => {
   const query = `
     ALTER TABLE blogs
-    ADD COLUMN user_id UUID;
+    ADD COLUMN IF NOT EXISTS user_id UUID;
   `;
 
   const query2 = `
@@ -61,9 +82,19 @@ export const userIdinBlogs = async () => {
 
   try {
     await pool.query(query);
-    await pool.query(query2);
-    console.log("Add user_id constraint in blogs");
+    console.log("Column user_id ensured");
   } catch (err) {
-    console.log("Error adding user_id constraint in blogs", err);
+    console.log("Error adding column:", err.message);
+  }
+
+  try {
+    await pool.query(query2);
+    console.log("Constraint ensured");
+  } catch (err) {
+    if (err.code === "42710") {
+      console.log("Constraint already exists, skip");
+    } else {
+      console.log("Error adding constraint:", err.message);
+    }
   }
 };

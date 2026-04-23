@@ -13,8 +13,8 @@ const router = express.Router();
 
 router.get("/papers", getAllPapers);
 router.get("/papers/:id", getPaperById);
-router.post("/:username/papers", authJWT, authUsername, createPaper);
-router.put("/:username/papers/:id", authJWT, authUsername, updatePaper);
-router.delete("/:username/papers/:id", authJWT, authUsername, deletePaper);
+router.post("/papers", authJWT, createPaper);
+router.put("/papers/:id", authJWT, updatePaper);
+router.delete("/papers/:id", authJWT, deletePaper);
 
 export default router;

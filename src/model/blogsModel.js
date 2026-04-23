@@ -45,7 +45,7 @@ export const createBlogController = async (payload) => {
   return result.rows[0];
 };
 
-export const updateBlogController = async (id, payload) => {
+export const updateBlogController = async (id, payload, userId) => {
   const values = [];
   const fields = [];
 
@@ -61,24 +61,38 @@ export const updateBlogController = async (id, payload) => {
   idx++;
 
   values.push(id);
+  idx++;
+  values.push(userId);
 
   const result = await pool.query(
     `
     UPDATE blogs SET ${fields.join(", ")}
-    WHERE id = $${idx}
+    WHERE id = $${idx - 1} AND user_id = $${idx}
     RETURNING *
     `,
     values,
   );
 
+  if (result.rows.length === 0) {
+    const error = new Error("Data not found or unauthorized");
+    error.statusCode = 404;
+    throw error;
+  }
+
   return result.rows[0];
 };
 
-export const deleteBlogController = async (id) => {
+export const deleteBlogController = async (id, userId) => {
   const result = await pool.query(
-    `DELETE FROM blogs WHERE id = $1 RETURNING *`,
-    [id],
+    `DELETE FROM blogs WHERE id = $1 AND user_id = $2 RETURNING *`,
+    [id, userId],
   );
+
+  if (result.rows.length === 0) {
+    const error = new Error("Data not found or unauthorized");
+    error.statusCode = 404;
+    throw error;
+  }
 
   return result.rows[0];
 };
