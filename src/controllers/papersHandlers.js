@@ -48,6 +48,9 @@ export const getPaperById = async (req, res, next) => {
 
 export const createPaper = async (req, res, next) => {
   const payload = normalizeJson(req.body);
+  const userId = req.user.id;
+  payload.user_id = userId;
+
   try {
     const paper = await createPaperController(payload);
     handleResponse(res, 201, "Paper created successfully", paper);
@@ -58,6 +61,9 @@ export const createPaper = async (req, res, next) => {
 
 export const updatePaper = async (req, res, next) => {
   const payload = normalizeJson(req.body);
+  const userId = req.user.id;
+  payload.user_id = userId;
+
   const id = req.params.id;
   try {
     const paper = await updatePaperController(id, payload);

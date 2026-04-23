@@ -48,6 +48,9 @@ export const getBooksById = async (req, res, next) => {
 
 export const createBook = async (req, res, next) => {
   const payload = normalizeJson(req.body);
+  const userId = req.user.id;
+  payload.user_id = userId;
+
   try {
     const book = await createBookController(payload);
 
@@ -59,6 +62,9 @@ export const createBook = async (req, res, next) => {
 
 export const updateBook = async (req, res, next) => {
   const payload = normalizeJson(req.body);
+  const userId = req.user.id;
+  payload.user_id = userId;
+
   const id = req.params.id;
   try {
     const book = await updateBookController(id, payload);

@@ -13,6 +13,11 @@ import createUserTable from "./data/createUserTable.js";
 import createBooksTable from "./data/createBooksTable.js";
 import createPapersTable from "./data/createPapersTable.js";
 import createBlogsTable from "./data/createBlogsTable.js";
+import {
+  userIdinBlogs,
+  userIdinBooks,
+  userIdinPapers,
+} from "./data/userIdToAll.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -31,10 +36,17 @@ app.use("/api/v1", blogsRoutes);
 app.use(errorHandling);
 
 // creating table
-createUserTable();
-createBooksTable();
-createPapersTable();
-createBlogsTable();
+const initDB = async () => {
+  await createUserTable();
+  await createBooksTable();
+  await createPapersTable();
+  await createBlogsTable();
+  await userIdinBooks();
+  await userIdinBlogs();
+  await userIdinPapers();
+};
+
+initDB();
 
 // Testing POSTGRES
 app.get("/", async (req, res) => {

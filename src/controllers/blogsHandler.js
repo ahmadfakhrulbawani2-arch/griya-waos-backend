@@ -48,6 +48,9 @@ export const getBlogById = async (req, res, next) => {
 
 export const createBlog = async (req, res, next) => {
   const payload = normalizeJson(req.body);
+  const userId = req.user.id;
+  payload.user_id = userId;
+
   try {
     const blog = await createBlogController(payload);
     handleResponse(res, 201, "Blog created successfully", blog);
@@ -58,6 +61,9 @@ export const createBlog = async (req, res, next) => {
 
 export const updateBlog = async (req, res, next) => {
   const payload = normalizeJson(req.body);
+  const userId = req.user.id;
+  payload.user_id = userId;
+
   const id = req.params.id;
   try {
     const blog = await updateBlogController(id, payload);
