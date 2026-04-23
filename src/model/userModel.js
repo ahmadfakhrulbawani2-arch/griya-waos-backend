@@ -1,5 +1,10 @@
 import pool from "../configs/db.js";
 
+export const userMetadataController = async () => {
+  const res = await pool.query("SELECT COUNT(*) FROM users");
+  return parseInt(res.rows[0].count);
+};
+
 export const getAllUsersService = async () => {
   const result = await pool.query("SELECT * FROM users");
   return result.rows;

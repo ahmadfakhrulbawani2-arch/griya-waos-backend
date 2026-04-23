@@ -5,13 +5,16 @@ import {
   getUserById,
   updateUser,
 } from "../controllers/userController.js";
+import authJWT from "../middlewares/authJWT.js";
 
 const router = express.Router();
 
+// dev and superadmin access
 router.get("/user", getAllUsers);
-// router.post("/user", createUser); // already handled by register
 router.get("/user/:id", getUserById);
-router.put("/user/:id", updateUser);
-router.delete("/user/:id", deleteUser);
+
+// user access
+router.put("/user", authJWT, updateUser);
+router.delete("/user", authJWT, deleteUser);
 
 export default router;
