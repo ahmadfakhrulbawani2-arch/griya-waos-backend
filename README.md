@@ -86,7 +86,7 @@ Data: [Blogs Database](./src/test/mockPapers.json)<br />
 
 ## ⚙️ Running instructions
 
-0. Uncomment part of this [index.js](./src/index.js) (if I comment it):
+1. Uncomment part of this [index.js](./src/index.js) (if I comment it):
 
 ```js
 app.listen(port, () => {
@@ -94,7 +94,17 @@ app.listen(port, () => {
 });
 ```
 
-1. Run the program:
+1. Install Dependencies:
+
+```sh
+# using npm
+npm install
+
+# using pnpm
+pnpm install
+```
+
+2. Run the program:
 
 ```sh
 # using npm
@@ -104,8 +114,8 @@ npm run dev
 pnpm dev
 ```
 
-2. Your app should be running in `.env PORT` or http://localhost:3001
-3. That's it. Try to query using bruno or postman.
+3. Your app should be running in `.env PORT` or http://localhost:3001
+4. That's it. Try to query using bruno or postman.
 
 ## 💬 Contribution?
 
