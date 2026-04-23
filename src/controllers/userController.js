@@ -35,7 +35,7 @@ export const updateUser = async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     const user = await updateUserService(
-      req.params.id,
+      req.user.id,
       username,
       email,
       password,
@@ -51,7 +51,7 @@ export const updateUser = async (req, res, next) => {
 
 export const deleteUser = async (req, res, next) => {
   try {
-    const user = await deleteUserService(req.params.id);
+    const user = await deleteUserService(req.user.id);
     if (!user) {
       return handleResponse(res, 404, "User not found");
     }

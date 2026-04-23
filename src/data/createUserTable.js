@@ -9,7 +9,7 @@ const createUserTable = async () => {
       email VARCHAR(300) NOT NULL UNIQUE,
       password TEXT NOT NULL,
       created_at TIMESTAMP DEFAULT NOW(),
-      update_at TIMESTAMP DEFAULT NOW()
+      updated_at TIMESTAMP DEFAULT NOW()
     );
   `;
 
