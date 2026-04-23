@@ -1,3 +1,4 @@
+import normalizeJson from "../middlewares/normalizeJson.js";
 import {
   booksMetadataController,
   createBookController,
@@ -46,7 +47,7 @@ export const getBooksById = async (req, res, next) => {
 };
 
 export const createBook = async (req, res, next) => {
-  const payload = req.body;
+  const payload = normalizeJson(req.body);
   try {
     const book = await createBookController(payload);
 
@@ -57,7 +58,7 @@ export const createBook = async (req, res, next) => {
 };
 
 export const updateBook = async (req, res, next) => {
-  const payload = req.body;
+  const payload = normalizeJson(req.body);
   const id = req.params.id;
   try {
     const book = await updateBookController(id, payload);

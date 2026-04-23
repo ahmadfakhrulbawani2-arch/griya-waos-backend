@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Belajar Backend dari Nol",
+    "image_url": "https://picsum.photos/seed/1/800/400",
+    "author": "Ahmad",
+    "first_label": "Programming",
+    "second_label": "Backend",
+    "content": "# Belajar Backend\n\nIni adalah panduan dasar belajar backend.\n\n## Materi\n- Node.js\n- Express\n- PostgreSQL\n\n```js\nconsole.log(\"Hello Backend\");\n```",
+    "pdf_url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+  },
+  {
+    "title": "Intro ke PostgreSQL",
+    "image_url": "https://picsum.photos/seed/2/800/400",
+    "author": "Budi",
+    "first_label": "Database",
+    "second_label": "SQL",
+    "content": "# PostgreSQL\n\nPostgreSQL adalah database relasional.\n\n## Contoh Query\n```sql\nSELECT * FROM users;\n```",
+    "pdf_url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+  },
+  {
+    "title": "Tips Lolos CP",
+    "image_url": "https://picsum.photos/seed/3/800/400",
+    "author": "Charlie",
+    "first_label": "Competitive Programming",
+    "second_label": "Tips",
+    "content": "# Competitive Programming\n\nTips biar jago:\n- Latihan rutin\n- Pahami algoritma\n\n> Konsistensi penting!",
+    "pdf_url": null
+  },
+  {
+    "title": "React Dasar",
+    "image_url": "https://picsum.photos/seed/4/800/400",
+    "author": "Dina",
+    "first_label": "Frontend",
+    "second_label": "React",
+    "content": "# React\n\nReact digunakan untuk membuat UI.\n\n```jsx\nfunction App() {\n  return <h1>Hello</h1>\n}\n```",
+    "pdf_url": ""
+  },
+  {
+    "title": "REST API Design",
+    "image_url": "https://picsum.photos/seed/5/800/400",
+    "author": "Eko",
+    "first_label": "Backend",
+    "second_label": "API",
+    "content": "# REST API\n\nGunakan HTTP method:\n- GET\n- POST\n- PUT\n- DELETE",
+    "pdf_url": null
+  },
+  {
+    "title": "Docker untuk Pemula",
+    "image_url": "https://picsum.photos/seed/6/800/400",
+    "author": "Fajar",
+    "first_label": "DevOps",
+    "second_label": "Docker",
+    "content": "# Docker\n\nContainerization itu penting.\n\n```bash\ndocker run hello-world\n```",
+    "pdf_url": "https://example.com/pdf/docker.pdf"
+  },
+  {
+    "title": "Linux Basic Command",
+    "image_url": "https://picsum.photos/seed/7/800/400",
+    "author": "Gilang",
+    "first_label": "Linux",
+    "second_label": "CLI",
+    "content": "# Linux\n\nCommand penting:\n- ls\n- cd\n- grep",
+    "pdf_url": null
+  },
+  {
+    "title": "JWT Authentication",
+    "image_url": "https://picsum.photos/seed/8/800/400",
+    "author": "Hana",
+    "first_label": "Security",
+    "second_label": "Auth",
+    "content": "# JWT\n\nJWT digunakan untuk authentication.\n\nStruktur:\n- Header\n- Payload\n- Signature",
+    "pdf_url": "https://example.com/pdf/jwt.pdf"
+  },
+  {
+    "title": "Belajar Git",
+    "image_url": "https://picsum.photos/seed/9/800/400",
+    "author": "Ivan",
+    "first_label": "Tools",
+    "second_label": "Git",
+    "content": "# Git\n\nVersion control system.\n\n```bash\ngit commit -m \"init\"\n```",
+    "pdf_url": null
+  },
+  {
+    "title": "Algoritma Sorting",
+    "image_url": "https://picsum.photos/seed/10/800/400",
+    "author": "Joko",
+    "first_label": "Algorithm",
+    "second_label": "Sorting",
+    "content": "# Sorting\n\nJenis sorting:\n- Bubble\n- Merge\n- Quick",
+    "pdf_url": "https://example.com/pdf/sorting.pdf"
+  },
+  {
+    "title": "CSS Flexbox Guide",
+    "image_url": "https://picsum.photos/seed/11/800/400",
+    "author": "Kiki",
+    "first_label": "Frontend",
+    "second_label": "CSS",
+    "content": "# Flexbox\n\nLayout modern CSS.\n\n```css\ndisplay: flex;\n```",
+    "pdf_url": null
+  },
+  {
+    "title": "State Management",
+    "image_url": "https://picsum.photos/seed/12/800/400",
+    "author": "Lina",
+    "first_label": "Frontend",
+    "second_label": "State",
+    "content": "# State\n\nGunakan:\n- useState\n- Redux",
+    "pdf_url": "https://example.com/pdf/state.pdf"
+  },
+  {
+    "title": "Clean Code Principles",
+    "image_url": "https://picsum.photos/seed/13/800/400",
+    "author": "Maman",
+    "first_label": "Programming",
+    "second_label": "Best Practice",
+    "content": "# Clean Code\n\nPrinsip:\n- Readable\n- Maintainable",
+    "pdf_url": null
+  },
+  {
+    "title": "Microservices Intro",
+    "image_url": "https://picsum.photos/seed/14/800/400",
+    "author": "Nina",
+    "first_label": "Architecture",
+    "second_label": "Microservices",
+    "content": "# Microservices\n\nPisahkan service kecil-kecil.",
+    "pdf_url": "https://example.com/pdf/microservices.pdf"
+  },
+  {
+    "title": "Testing di JavaScript",
+    "image_url": "https://picsum.photos/seed/15/800/400",
+    "author": "Omar",
+    "first_label": "Testing",
+    "second_label": "JS",
+    "content": "# Testing\n\nGunakan Jest.\n\n```js\ntest(\"works\", () => {\n expect(1).toBe(1);\n});\n```",
+    "pdf_url": null
+  }
+]
