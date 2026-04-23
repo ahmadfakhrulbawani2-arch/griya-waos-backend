@@ -7,10 +7,12 @@ import userRoutes from "./routes/userRoutes.js";
 import loginRegisterRoutes from "./routes/loginRegisterRoutes.js";
 import booksRoutes from "./routes/booksRoutes.js";
 import papersRoutes from "./routes/papersRoutes.js";
+import blogsRoutes from "./routes/blogsRoutes.js";
 import errorHandling from "./middlewares/errorHandler.js";
 import createUserTable from "./data/createUserTable.js";
 import createBooksTable from "./data/createBooksTable.js";
 import createPapersTable from "./data/createPapersTable.js";
+import createBlogsTable from "./data/createBlogsTable.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -24,6 +26,7 @@ app.use("/api/v1", userRoutes);
 app.use("/api/v1", loginRegisterRoutes);
 app.use("/api/v1", booksRoutes);
 app.use("/api/v1", papersRoutes);
+app.use("/api/v1", blogsRoutes);
 // err handling middleware
 app.use(errorHandling);
 
@@ -31,6 +34,7 @@ app.use(errorHandling);
 createUserTable();
 createBooksTable();
 createPapersTable();
+createBlogsTable();
 
 // Testing POSTGRES
 app.get("/", async (req, res) => {
