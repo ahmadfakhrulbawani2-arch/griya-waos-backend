@@ -13,8 +13,8 @@ const router = express.Router();
 
 router.get("/blogs", getAllBlogs);
 router.get("/blogs/:id", getBlogById);
-router.post("/:username/blogs", authJWT, authUsername, createBlog);
-router.put("/:username/blogs/:id", authJWT, authUsername, updateBlog);
-router.delete("/:username/blogs/:id", authJWT, authUsername, deleteBlog);
+router.post("/blogs", authJWT, createBlog);
+router.put("/blogs/:id", authJWT, updateBlog);
+router.delete("/blogs/:id", authJWT, deleteBlog);
 
 export default router;

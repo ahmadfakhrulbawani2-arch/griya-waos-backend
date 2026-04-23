@@ -13,8 +13,8 @@ const router = express.Router();
 
 router.get("/books", getAllBooks);
 router.get("/books/:id", getBooksById);
-router.post("/:username/books", authJWT, authUsername, createBook);
-router.put("/:username/books/:id", authJWT, authUsername, updateBook);
-router.delete("/:username/books/:id", authJWT, authUsername, deleteBook);
+router.post("/books", authJWT, createBook);
+router.put("/books/:id", authJWT, updateBook);
+router.delete("/books/:id", authJWT, deleteBook);
 
 export default router;
