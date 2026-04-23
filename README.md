@@ -71,6 +71,8 @@ Data: [Books Database](./src/test/mockBooks.json)<br />
    2. **PUT** `/papers/:id`: Update paper <br />
    3. **DELETE** `/papers/:id`: delete paper <br />
 
+Data: [Papers Database](./src/test/mockPapers.json)<br />
+
 ### Blogs Table (blogs)
 
 1. **GET** `/blogs`: Get all blogs (can use page=&limit= params) <br />
@@ -79,6 +81,8 @@ Data: [Books Database](./src/test/mockBooks.json)<br />
    1. **POST** `/blogs`: Create blog <br />
    2. **PUT** `/blogs/:id`: Update blog <br />
    3. **DELETE** `/blogs/:id`: delete blog <br />
+
+Data: [Blogs Database](./src/test/mockPapers.json)<br />
 
 ## ⚙️ Running instructions
 
